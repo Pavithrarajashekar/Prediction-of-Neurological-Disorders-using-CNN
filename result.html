@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurological Disorder Prediction</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            color: #5f6368;
+        }
+        form {
+            margin-top: 50px;
+        }
+        input[type="file"] {
+            margin: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #4CAF50;
+            background-color: #e7f3e7;
+            font-size: 16px;
+            color: #4CAF50;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Neurological Disorder Prediction</h1>
+        <p>Upload an MRI image to predict the neurological disorder.</p>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <br><br>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
